@@ -1,0 +1,134 @@
+package umlClassDiagram;
+import java.io.*;
+
+public class Menu {
+
+	public static void main(String []args)throws Exception
+		{
+			String order, again;
+		    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+				int price1=0, loop1=0, quantity1;
+				int total = 0, payment = 0,
+				ans = 0;
+		        
+		        System.out.println(">>");
+		        System.out.println("WELCOME SA AMO KARENDERYA");
+		        System.out.println(">>");
+		        System.out.println("                           MENU ");
+			    System.out.println(" ______________________________________________________"); 
+				System.out.println("| Code        | Meal                       | Price     |");
+				System.out.println("*******************************************************");
+				System.out.println("| (A1)        | Mediterranean pork chops   | P30.00    |");
+				System.out.println("| (A2)        | Lemon herb orzo            | P139.00   |");
+				System.out.println("| (B1)        | Greek chicken meatballs    | P35.00    |");
+				System.out.println("| (B2)        | Bacon-wrapped asparagus    | P50.00    |");
+				System.out.println("| (C1)        | Oven roasted tomatoes      | P65.00    |");
+				System.out.println("| (C2         | Mashed potato puffs        | P79.00    |");
+				System.out.println("| (D1)        | Chicken lyonaise           | P60.00    |");
+		    	System.out.println("| (D2)        | Creamy barley soup w/ dill | P40.00    |");
+				System.out.println("| (E1)        | Baklava                    | P10.00    |");
+				System.out.println("| (E2)        | Beef tenderloin            | P50.00    |");
+				System.out.println("| (E3)        | Sourdough                  | P70.00    |");
+				System.out.println("| (F1)        | Faux gras                  | P50.00    |");
+				System.out.println("| (F2)        | Red mullet                 | P10.00    |");
+				System.out.println("*******************************************************");
+				
+				do {
+					
+					System.out.println("");
+					System.out.print("Enter code order:");
+					order = br.readLine();
+					if(order.equalsIgnoreCase("A1")) {
+						price1 = 30;
+						System.out.println("Order Description:  Mediterranean pork chops ");
+					}
+					else if(order.equalsIgnoreCase("A2")) {
+						price1 = 139;
+						System.out.println("Order Description:  Lemon herb orzo");
+					}
+					if(order.equalsIgnoreCase("B1")) {
+								price1 = 35;
+								System.out.println("Order Description:  Greek chicken meatballs");
+				    }
+					else if (order.equalsIgnoreCase("B2")) {
+								price1 = 50;
+								System.out.println("Order Description:  Bacon-wrapped asparagus");
+					}
+					else if (order.equalsIgnoreCase("C1")) {
+								price1 = 65;
+								System.out.println("Order Description:  Oven roasted tomatoes");
+					}
+					if (order.equalsIgnoreCase("C2")) {
+									price1 = 79;
+									System.out.println("Order Description:  Mashed potato puffs");
+					}
+					else if(order.equalsIgnoreCase("D1")) {
+									price1 = 60;
+									System.out.println("Order Description:  Chicken lyonaise");
+					}				
+					if(order.equalsIgnoreCase("D2")) {
+									price1 = 40;
+									System.out.println("Order Description:  Creamy barley soup w/ dill");
+					}
+					else if (order.equalsIgnoreCase("E1")) {
+										price1 = 10;
+										System.out.println("Order Description:  Baklava");
+					}
+
+					if(order.equalsIgnoreCase("E2")) {
+								         price1 = 50;
+								         System.out.println("Order Description:  Beef tenderloin");
+					}			       
+				    else if(order.equalsIgnoreCase("E3")) {
+								        	 price1 = 70;
+		                                   System.out.println("Order Description:  Sourdough");
+				    }
+					if(order.equalsIgnoreCase("F1")) {
+								 price1 = 50;
+								System.out.println("Order Description:  Faux gras");
+					}
+					else if(order.equalsIgnoreCase("F2")) {
+								  price1 = 10;
+								  System.out.println("Order Description:  Red mullet");
+					
+					}
+								  
+					System.out.println("Enter Quantity:");
+					quantity1 = Integer.parseInt(br.readLine());
+					     total += price1*quantity1;
+					System.out.print("another order?(Y/N): ");
+					again = br.readLine();
+					
+					if (again.equalsIgnoreCase("y"))
+						loop1 = loop1+1;
+					else loop1 = loop1- 100;
+					
+				
+			}
+				while(loop1==1) ;
+				
+				
+				System.out.println("SERVICE CREW COUNTER");
+				System.out.println("Total Price:"+total);
+				
+				
+				System.out.print("Enter Payment:");
+				payment = Integer.parseInt(br.readLine());
+				ans = payment - total;
+				if(total<payment) {
+					System.out.println("Your change is:"+ans);
+					System.out.println("Thank you for your order!");
+				}
+				else if (payment<total) {
+					System.out.println("Luhh kulang...!Luhh");
+				}
+				
+
+				}
+		}    
+
+				
+
+	
+					
+				
