@@ -1,19 +1,4 @@
 # Midterm-Project_UML-Class-Diagram
-Skip to content
-Sign up
-/
-Read.me
-Public
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Read.me/README.md
-Update README.md
  
 Magandang araw sa po sa lahat. Ngayon ay aming ipiprisinta ang aming nagawang java project about Unified Modeling Language.
 
